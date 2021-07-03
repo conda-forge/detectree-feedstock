@@ -1,5 +1,5 @@
 {% set name = "detectree" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/detectree-{{ version }}.tar.gz
-  sha256: cdd6853f386b2096cae5f4c29f9e575cb34648ed2813a97ccbec208606361674
+  sha256: f308c8e82e9b5a28728f484cb798af4623c51cd350f0684afb97b370d91a0f8e
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - "detectree=detectree.cli.main:cli"
+    - detectree=detectree.cli.main:cli
 
 requirements:
   host:
