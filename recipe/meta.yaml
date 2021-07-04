@@ -22,16 +22,20 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - click
     - dask-core
     - joblib
+    - laspy >=2.0.0
     - numpy >=1.15
     - pandas >=0.23
+    - pillow
     - pymaxflow >=1.0.0
     - python >=3.6
     - rasterio >=1.0.0
     - scikit-image
     - scikit-learn
     - scipy >=1.0.0
+    - shapely    
     - tqdm
 
 test:
