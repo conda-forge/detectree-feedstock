@@ -1,5 +1,5 @@
 {% set name = "detectree" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/detectree-{{ version }}.tar.gz
-  sha256: f308c8e82e9b5a28728f484cb798af4623c51cd350f0684afb97b370d91a0f8e
+  sha256: 7575324f15933561879c3bde5e1817ec9317e36f405235e35b5074a061129c71
 
 build:
   number: 0
@@ -35,7 +35,7 @@ requirements:
     - scikit-image
     - scikit-learn
     - scipy >=1.0.0
-    - shapely    
+    - shapely
     - tqdm
 
 test:
