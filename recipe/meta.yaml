@@ -48,6 +48,7 @@ test:
     - detectree --help
   requires:
     - pip
+    - opencv =*=headless*
 
 about:
   home: https://github.com/martibosch/detectree
