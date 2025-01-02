@@ -7,7 +7,7 @@ Home: https://github.com/martibosch/detectree
 
 Package license: GPL-3.0-or-later
 
-Summary: Tree detection from aerial imagery
+Summary: Tree detection from aerial imagery in Python.
 
 Documentation: https://detectree.readthedocs.io/en/latest/?badge=latest
 
