@@ -1,5 +1,5 @@
 {% set name = "detectree" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,23 +7,24 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/detectree-{{ version }}.tar.gz
-  sha256: 16ada0fa7ee03dcd7b7075980640b229f289c24c976332337680720626a76fbd
+  sha256: d99d036188ac06cfadb9c5d67b1e47e67e11d90572e3bbce7eca004ba5e3e7dc
 
 build:
   entry_points:
     - detectree = detectree.cli.main:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.10
     - setuptools >=61.0
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - dask-core
+    - huggingface_hub
     - joblib
     - laspy >=2.0.0
     - lightgbm
@@ -32,7 +33,7 @@ requirements:
     - pandas >=0.23
     - pymaxflow >=1.0.0
     - rasterio >=1.0.0
-    - scikit-image
+    - scikit-image >=0.25.0
     - scikit-learn
     - scipy >=1.0.0
     - skops
@@ -49,7 +50,7 @@ test:
   requires:
     - pip
     - opencv =*=headless*
-    - python {{ python_min }}
+    - python >=3.10
 
 about:
   home: https://github.com/martibosch/detectree
