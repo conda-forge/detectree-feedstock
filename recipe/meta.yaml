@@ -18,12 +18,13 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.10
     - setuptools >=61.0
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - dask-core
+    - huggingface_hub
     - joblib
     - laspy >=2.0.0
     - lightgbm
@@ -32,7 +33,7 @@ requirements:
     - pandas >=0.23
     - pymaxflow >=1.0.0
     - rasterio >=1.0.0
-    - scikit-image
+    - scikit-image >=0.25.0
     - scikit-learn
     - scipy >=1.0.0
     - skops
@@ -49,7 +50,7 @@ test:
   requires:
     - pip
     - opencv =*=headless*
-    - python {{ python_min }}
+    - python >=3.10
 
 about:
   home: https://github.com/martibosch/detectree
