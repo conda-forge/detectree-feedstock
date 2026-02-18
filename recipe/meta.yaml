@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - uv-build >=0.10.4,<0.11.0
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - dask-core
     - huggingface_hub
     - joblib
@@ -49,8 +49,8 @@ test:
     - detectree --help
   requires:
     - pip
-    - opencv =*=headless*
-    - python >=3.10
+    - opencv *=headless*
+    - python {{ python_min }}
 
 about:
   home: https://github.com/martibosch/detectree
