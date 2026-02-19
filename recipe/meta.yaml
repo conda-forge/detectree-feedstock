@@ -1,5 +1,5 @@
 {% set name = "detectree" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/detectree-{{ version }}.tar.gz
-  sha256: b4c6f273cb3ac58ab47e98622b105c662071d6d19aad8b08c381d3266509c8f1
+  sha256: 720cd5e0d28850b8dc1ed950b14ad6d89cd0921feab7e0c05cab6c36fa93fab6
 
 build:
   entry_points:
